@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="castle">
+      <UniqueIdentifier>{7533946e-72ac-4afe-9749-c0742a4ccc4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="castle\app">
+      <UniqueIdentifier>{8cc2470b-d1aa-4b27-891f-49b652dc3c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="castle\game">
+      <UniqueIdentifier>{5f6306be-0c00-49be-ae26-328b74d79bb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="keep">
+      <UniqueIdentifier>{1597c429-82f1-4a40-a332-9c5fbc62da6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="watchtower">
+      <UniqueIdentifier>{d50e4da3-4fa1-4ffd-b1d3-0836f7589e1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="watchtower\device">
+      <UniqueIdentifier>{e454ce0a-6bfc-4db9-b51c-4a9a4c30c3cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="keep\window">
+      <UniqueIdentifier>{123b5f16-0aa9-451f-8ec1-c3a00c85e6a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\castle\app\Activity.android.cpp">
+      <Filter>castle\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\castle\game\Game.cpp">
+      <Filter>castle\game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\watchtower\device\Device.vulkan.cpp">
+      <Filter>watchtower\device</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\keep\window\Window.win32.cpp">
+      <Filter>keep\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\castle\app\Activity.pc.cpp">
+      <Filter>castle\app</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\castle\game\Game.h">
+      <Filter>castle\game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\castle\game\Updater.h">
+      <Filter>castle\game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\types.h">
+      <Filter>keep</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\watchtower\device\Device.h">
+      <Filter>watchtower\device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\watchtower\device\Device.vulkan.h">
+      <Filter>watchtower\device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\constants.h">
+      <Filter>keep</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\window\Window.h">
+      <Filter>keep\window</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
