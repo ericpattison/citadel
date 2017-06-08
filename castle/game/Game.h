@@ -11,10 +11,10 @@
 
 class Game {
 public:
-	static std::unique_ptr<Game> Create(Window& window);
+	static std::unique_ptr<Game> Create(SystemWindow& window);
 	static String Name();
 
-	Game(Window& window);
+	Game(SystemWindow& window);
 
 	virtual void Update() = 0;
 	virtual void Render() = 0;

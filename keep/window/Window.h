@@ -1,5 +1,5 @@
-#ifndef _WINDOW_H_
-#define _WINDOW_H_
+#ifndef _SYSTEMWINDOW_H_
+#define _SYSTEMWINDOW_H_
 
 #include <memory>
 #include "../types.h"
@@ -17,10 +17,10 @@ enum WindowStatus {
 	Quit
 };
 
-class Window {
+class SystemWindow {
 public:
-	Window(WindowInfo info);
-	virtual ~Window();
+	SystemWindow(WindowInfo info);
+	virtual ~SystemWindow();
 
 	void Resize(u32 width, u32 height);
 	void Title(String title);

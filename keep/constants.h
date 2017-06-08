@@ -1,5 +1,5 @@
 #ifndef _CONSTANTS_H_
-#define _COSNTANTS_H_
+#define _CONSTANTS_H_
 
 #define ENGINE_NAME "Citadel"
 #define ENGINE_VERSION_MAJOR 0

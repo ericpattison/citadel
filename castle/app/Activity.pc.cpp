@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-void main(int argc, char const* argv[]) {
+int main(int argc, char const* argv[]) {
 	int result = 0;
 
 	WindowInfo windowInfo;
@@ -14,7 +14,7 @@ void main(int argc, char const* argv[]) {
 	windowInfo.height = 720;
 	windowInfo.title = "Citadel";
 
-	Window window(windowInfo);
+	SystemWindow window(windowInfo);
 	std::unique_ptr<Game> game = Game::Create(window);
 
 	while (window.ProcessMessages() != WindowStatus::Quit) {
@@ -22,4 +22,5 @@ void main(int argc, char const* argv[]) {
 	}
 
 	window.Exit(result);
+	return result;
 }

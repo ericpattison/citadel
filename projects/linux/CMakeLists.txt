@@ -9,11 +9,12 @@ set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
+set(CMAKE_CXX_STANDARD 14)
 
 include_directories(../../)
 
 add_library(
-	citadel-lib
+	citadel
 	STATIC
 
 	../../castle/app/Activity.pc.cpp
@@ -27,7 +28,7 @@ find_library( GL gl )
 find_library( GLU glu )
 
 target_link_libraries(
-	citadel-lib
+	citadel
 
 	x11
 	gl

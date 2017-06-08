@@ -19,7 +19,7 @@ private:
 };
 
 
-Game::Game(Window& window) {
+Game::Game(SystemWindow& window) {
 	impl = std::make_shared<Impl>();
 }
 void Game::OnUpdate(std::shared_ptr<Updater> updater) {
