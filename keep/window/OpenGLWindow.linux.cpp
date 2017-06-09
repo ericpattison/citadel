@@ -7,19 +7,33 @@
 #include <GL/glx.h>
 #include <GL/glu.h>
 
+#include <stdio.h>
+
 class OpenGLWindow::Impl {
 public:
 	Impl(WindowInfo& info) {
+		printf("\n\tCreate Window OpenGL Linux Impl\n\n");
 		display = XOpenDisplay(NULL);
+		if(display == NULL) {
+			printf("\n\tcannot connect to Xserver\n\n");
+			exit(0);
+		}
+
 		root = DefaultRootWindow(display);
 
 		GLint attributes[] = { GLX_RGBA, GLX_DEPTH_SIZE, 24, GLX_DOUBLEBUFFER, None };
 		XVisualInfo* visualInfo = glXChooseVisual(display, 0, attributes);
+		if(visualInfo == NULL) {
+			printf("\n\tno appropriate visual found\n\n");
+			exit(0);
+		} else {
+			printf("\n\tvisual %p selected\n", (void*)visualInfo->visualid);
+		}
+		colormap = XCreateColormap(display, root, visualInfo->visual, AllocNone);
 
 		XSetWindowAttributes setWindowAttributes;
 		setWindowAttributes.colormap = colormap;
 		setWindowAttributes.event_mask = ExposureMask | KeyPressMask;
-		colormap = XCreateColormap(display, root, visualInfo->visual, AllocNone);
 
 		windowHandle = XCreateWindow(display, root, 0, 0, 10, 10,
 			0, visualInfo->depth, InputOutput, visualInfo->visual,
@@ -39,7 +53,8 @@ public:
 	}
 
 	void SetWindowTitle(String title) {
-		XStoreName(display, windowHandle, title.c_str());
+		std::string s(title.begin(), title.end());
+		XStoreName(display, windowHandle, s.c_str());
 	}
 
 	void SetWindowSize(u32 width, u32 height) {
