@@ -4,7 +4,7 @@
 #include "../../keep/types.h"
 #include "../../keep/constants.h"
 #include "Updater.h"
-#include "../../keep/window/Window.h"
+#include "../../keep/window/SystemWindow.h"
 
 #include <memory>
 
