@@ -3,7 +3,7 @@
 
 #include "SystemWindow.h"
 #include "../types.h"
-class OpenGLWindow : SystemWindow {
+class OpenGLWindow : public SystemWindow {
 public:
 	OpenGLWindow(WindowInfo info);
 	virtual ~OpenGLWindow();

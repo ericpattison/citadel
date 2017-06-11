@@ -39,6 +39,18 @@
     <ClCompile Include="..\..\..\castle\app\Activity.pc.cpp">
       <Filter>castle\app</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\keep\window\Window.xcb.cpp">
+      <Filter>keep\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\keep\window\Window.xlib.cpp">
+      <Filter>keep\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\keep\window\OpenGLWindow.linux.cpp">
+      <Filter>keep\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\castle\app\Activity.linux.cpp">
+      <Filter>castle\app</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\castle\game\Game.h">
@@ -59,7 +71,10 @@
     <ClInclude Include="..\..\..\keep\constants.h">
       <Filter>keep</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\keep\window\Window.h">
+    <ClInclude Include="..\..\..\keep\window\SystemWindow.h">
+      <Filter>keep\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\window\OpenGLWindow.h">
       <Filter>keep\window</Filter>
     </ClInclude>
   </ItemGroup>

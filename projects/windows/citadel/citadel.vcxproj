@@ -25,9 +25,27 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\..\castle\app\Activity.linux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\castle\app\Activity.pc.cpp" />
     <ClCompile Include="..\..\..\castle\game\Game.cpp" />
+    <ClCompile Include="..\..\..\keep\window\OpenGLWindow.linux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\keep\window\Window.win32.cpp" />
+    <ClCompile Include="..\..\..\keep\window\Window.xcb.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\keep\window\Window.xlib.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\watchtower\device\Device.vulkan.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -35,7 +53,8 @@
     <ClInclude Include="..\..\..\castle\game\Updater.h" />
     <ClInclude Include="..\..\..\keep\constants.h" />
     <ClInclude Include="..\..\..\keep\types.h" />
-    <ClInclude Include="..\..\..\keep\window\Window.h" />
+    <ClInclude Include="..\..\..\keep\window\OpenGLWindow.h" />
+    <ClInclude Include="..\..\..\keep\window\SystemWindow.h" />
     <ClInclude Include="..\..\..\watchtower\device\Device.h" />
     <ClInclude Include="..\..\..\watchtower\device\Device.vulkan.h" />
   </ItemGroup>
