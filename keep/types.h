@@ -32,4 +32,14 @@ using next_t = Delegate<void()>;
 using Next = std::shared_ptr<next_t>;
 using Callback = Delegate<void(Next)>;
 
+template<class T>
+using UPtr = std::unique_ptr<T>;
+template<class T>
+using SPtr = std::shared_ptr<T>;
+
+template<class T>
+using MakeUPtr = std::make_unique<T>;
+template<class T>
+using MakeSPtr = std::make_shared<T>;
+
 #endif

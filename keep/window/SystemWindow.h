@@ -1,7 +1,6 @@
 #ifndef _SYSTEMWINDOW_H_
 #define _SYSTEMWINDOW_H_
 
-#include <memory>
 #include "../types.h"
 #include "../constants.h"
 
@@ -19,17 +18,13 @@ enum WindowStatus {
 
 class SystemWindow {
 public:
-	SystemWindow(WindowInfo info);
-	virtual ~SystemWindow();
+	SystemWindow(WindowInfo info) { }
+	virtual ~SystemWindow() { }
 
-	void Resize(u32 width, u32 height);
-	void Title(String title);
-	WindowStatus ProcessMessages();
-	void Exit(int errorCode);
-
-private:
-	class Impl;
-	std::unique_ptr<Impl> impl;
+	virtual void Resize(u32 width, u32 height) = 0;
+	virtual void Title(String title) = 0;
+	virtual WindowStatus ProcessMessages() = 0;
+	virtual void Exit(int errorCode) = 0;
 };
 
 #endif
