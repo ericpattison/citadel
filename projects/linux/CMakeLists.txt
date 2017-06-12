@@ -17,10 +17,10 @@ add_library(
 	citadel
 	STATIC
 
-	../../castle/app/Activity.pc.cpp
+	../../castle/app/Activity.linux.cpp
 	../../castle/game/Game.cpp
 
-  ../../keep/window/Window.xlib.cpp
+	../../keep/window/OpenGLWindow.linux.cpp
 )
 
 find_library( X11 x11 )

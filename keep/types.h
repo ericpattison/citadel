@@ -44,10 +44,15 @@ using SPtr = std::shared_ptr<T>;
 
 #else
 
-template<class T>
-using MakeUPtr = std::make_unique<T>;
-template<class T>
-using MakeSPtr = std::make_shared<T>;
+template<class T, typename ...Args>
+UPtr<T> MakeUPtr(Args&& ...args) {
+	return std::make_unique<T>(std::forward<Args>(args)...);
+}
+
+template<class T, typename ...Args>
+SPtr<T> MakeSPtr(Args&& ...args) {
+	return std::make_shared<T>(std::forward<Args>(args)...);
+}
 
 #endif
 

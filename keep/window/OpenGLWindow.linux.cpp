@@ -31,14 +31,14 @@ public:
 		XMapWindow(display, windowHandle);
 
 		glContext = glXCreateContext(display, visualInfo, NULL, GL_TRUE);
-		glXMakeCurrent(display, windowHandle, context);
+		glXMakeCurrent(display, windowHandle, glContext);
 	}
 
 	~Impl() {
 
 	}
 
-	void SetWIndowTitle(String title) {
+	void SetWindowTitle(String title) {
 		XStoreName(display, windowHandle, title.c_str());
 	}
 
@@ -85,7 +85,7 @@ void OpenGLWindow::Resize(u32 width, u32 height) {
 }
 
 void OpenGLWindow::Title(String title) {
-	impl->SetWIndowTitle(title);
+	impl->SetWindowTitle(title);
 }
 
 WindowStatus OpenGLWindow::ProcessMessages() {
