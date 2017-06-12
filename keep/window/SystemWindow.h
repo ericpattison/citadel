@@ -18,7 +18,7 @@ enum WindowStatus {
 
 class SystemWindow {
 public:
-	SystemWindow(WindowInfo info) { }
+	SystemWindow(WindowInfo& info) { }
 	virtual ~SystemWindow() { }
 
 	virtual void Resize(u32 width, u32 height) = 0;

@@ -4,17 +4,16 @@
 #include "../../keep/types.h"
 #include "../../keep/constants.h"
 #include "Updater.h"
-#include "../../keep/window/Window.h"
+#include "../../keep/window/SystemWindow.h"
 
 #include <memory>
 
 
 class Game {
 public:
-	static std::unique_ptr<Game> Create(SystemWindow& window);
-	static String Name();
+	//static UPtr<Game> Create();
 
-	Game(SystemWindow& window);
+	Game();
 
 	virtual void Update() = 0;
 	virtual void Render() = 0;
@@ -25,5 +24,7 @@ private:
 	class Impl;
 	std::shared_ptr<Impl> impl;
 };
+
+extern "C" __attribute__ ((visibility ("default"))) void RegisterGame();
 
 #endif

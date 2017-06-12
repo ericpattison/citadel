@@ -5,7 +5,7 @@
 #include "../types.h"
 class OpenGLWindow : public SystemWindow {
 public:
-	OpenGLWindow(WindowInfo info);
+	OpenGLWindow(WindowInfo& info);
 	virtual ~OpenGLWindow();
 
 	virtual void Resize(u32 width, u32 height);

@@ -1,9 +1,6 @@
 #include "Game.h"
 
 #include <vector>
-#include <memory>
-
-#include "../../watchtower/device/Device.vulkan.h"
 
 class Game::Impl {
 public:
@@ -18,10 +15,21 @@ private:
 	std::vector<std::shared_ptr<Updater>> updaters;
 };
 
+/*UPtr<Game>
+Game::Create() {
+	GameRegistrar::Creator Create = GameRegistrar::GetCreator();
+	UPtr<Game> game = (*Create)();
 
-Game::Game(SystemWindow& window) {
+	return game;
+}*/
+
+Game::Game() {
 	impl = std::make_shared<Impl>();
 }
 void Game::OnUpdate(std::shared_ptr<Updater> updater) {
 	impl->OnUpdate(updater);
+}
+
+__attribute__ ((visibility ("default"))) void RegisterGame() {
+
 }

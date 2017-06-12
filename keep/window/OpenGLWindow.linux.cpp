@@ -9,7 +9,7 @@
 
 class OpenGLWindow::Impl {
 public:
-	Impl(WindowInfo info) {
+	Impl(WindowInfo& info) {
 		display = XOpenDisplay(NULL);
 		root = DefaultRootWindow(display);
 
@@ -72,7 +72,7 @@ private:
 	GLXContext glContext;
 };
 
-OpenGLWindow::OpenGLWindow(WindowInfo info) : SystemWindow(info) {
+OpenGLWindow::OpenGLWindow(WindowInfo& info) : SystemWindow(info) {
 	impl = MakeUPtr<Impl>(info);
 }
 

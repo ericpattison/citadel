@@ -37,9 +37,18 @@ using UPtr = std::unique_ptr<T>;
 template<class T>
 using SPtr = std::shared_ptr<T>;
 
+#ifdef ANDROID
+
+#define MakeUPtr std::make_unique
+#define MakeSPtr std::make_shared
+
+#else
+
 template<class T>
 using MakeUPtr = std::make_unique<T>;
 template<class T>
 using MakeSPtr = std::make_shared<T>;
+
+#endif
 
 #endif

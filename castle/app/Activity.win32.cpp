@@ -1,6 +1,6 @@
 #include "../../keep/types.h"
 #include "../../keep/constants.h"
-#include "../../keep/window/Window.h"
+#include "../../keep/window/OpenGLWindow.h"
 
 #include "../game/Game.h"
 
@@ -14,7 +14,7 @@ int main(int argc, char const* argv[]) {
 	windowInfo.height = 720;
 	windowInfo.title = "Citadel";
 
-	SystemWindow window(windowInfo);
+	OpenGLWindow window(windowInfo);
 	std::unique_ptr<Game> game = Game::Create(window);
 
 	while (window.ProcessMessages() != WindowStatus::Quit) {

@@ -22,6 +22,9 @@
     <Filter Include="keep\window">
       <UniqueIdentifier>{123b5f16-0aa9-451f-8ec1-c3a00c85e6a5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="keep\utils">
+      <UniqueIdentifier>{a8417f20-e097-4d40-bac2-731ad8c9a274}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\castle\app\Activity.android.cpp">
@@ -36,20 +39,17 @@
     <ClCompile Include="..\..\..\keep\window\Window.win32.cpp">
       <Filter>keep\window</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\castle\app\Activity.pc.cpp">
-      <Filter>castle\app</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\keep\window\Window.xcb.cpp">
-      <Filter>keep\window</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\keep\window\Window.xlib.cpp">
-      <Filter>keep\window</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\keep\window\OpenGLWindow.linux.cpp">
       <Filter>keep\window</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\castle\app\Activity.linux.cpp">
       <Filter>castle\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\castle\app\Activity.win32.cpp">
+      <Filter>castle\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\keep\window\OpenGLWindow.android.cpp">
+      <Filter>keep\window</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\keep\window\OpenGLWindow.h">
       <Filter>keep\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\utils\android.h">
+      <Filter>keep\utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -12,7 +12,7 @@ android {
         externalNativeBuild {
             cmake {
                 arguments "-DANDROID_TOOLCHAIN=clang"
-                cppFlags "-std=c++14"
+                cppFlags "-std=c++14 -fdeclspec"
             }
         }
         ndk {
