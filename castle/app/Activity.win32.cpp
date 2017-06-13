@@ -12,10 +12,10 @@ int main(int argc, char const* argv[]) {
 	WindowInfo windowInfo;
 	windowInfo.width = 1280;
 	windowInfo.height = 720;
-	windowInfo.title = "Citadel";
+	windowInfo.title = L"Citadel";
 
 	OpenGLWindow window(windowInfo);
-	std::unique_ptr<Game> game = Game::Create(window);
+	std::unique_ptr<Game> game = Game::Create();
 
 	while (window.ProcessMessages() != WindowStatus::Quit) {
 

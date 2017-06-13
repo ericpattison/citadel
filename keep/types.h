@@ -21,7 +21,7 @@ typedef	double		real64;
 typedef	void *		handle;
 
 #include <string>
-typedef std::string String;
+typedef std::wstring String;
 
 #include <functional>
 template<class func>

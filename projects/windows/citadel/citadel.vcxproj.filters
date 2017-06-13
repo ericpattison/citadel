@@ -51,6 +51,12 @@
     <ClCompile Include="..\..\..\keep\window\OpenGLWindow.android.cpp">
       <Filter>keep\window</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\keep\window\OpenGLWindow.win32.cpp">
+      <Filter>keep\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\keep\utils\win32.cpp">
+      <Filter>keep\utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\castle\game\Game.h">
@@ -78,6 +84,9 @@
       <Filter>keep\window</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\keep\utils\android.h">
+      <Filter>keep\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\utils\win32.h">
       <Filter>keep\utils</Filter>
     </ClInclude>
   </ItemGroup>

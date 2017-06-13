@@ -25,8 +25,6 @@ private:
 	std::shared_ptr<Impl> impl;
 };
 
-extern "C" void RegisterGame();
-
 typedef UPtr<Game> (*Creator)();
 extern "C" {
     struct GameRegistrar {

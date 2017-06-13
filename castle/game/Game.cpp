@@ -2,12 +2,12 @@
 
 #include <vector>
 
-__attribute__ ((visibility ("default")))
+EXPORT
 GameRegistrar::GameRegistrar(Creator func) {
-
+	GetCreator() = func;
 }
 
-__attribute__((visibility("default")))
+EXPORT
 Creator& GameRegistrar::GetCreator() {
     static Creator creatorFunc;
     return creatorFunc;
@@ -37,10 +37,4 @@ Game::Game() {
 }
 void Game::OnUpdate(std::shared_ptr<Updater> updater) {
 	impl->OnUpdate(updater);
-}
-
-
-__attribute__ ((visibility ("default")))
-void RegisterGame() {
-
 }
