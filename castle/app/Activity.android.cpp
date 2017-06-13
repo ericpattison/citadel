@@ -11,6 +11,7 @@ void android_main(struct android_app* state) {
 	windowInfo.appState = state;
 
 	OpenGLWindow window(windowInfo);
+    UPtr<Game> game = Game::Create();
 
 	while(window.ProcessMessages() != WindowStatus::Quit) { }
 

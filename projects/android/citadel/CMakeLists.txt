@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.4.1)
 
+set(CMAKE_VERBOSE_MAKEFILE on)
+
 include_directories(
     ../../../
     ${ANDROID_NDK}/sources/android/native_app_glue
@@ -8,7 +10,7 @@ include_directories(
 add_library(
     citadel
 
-    SHARED
+    STATIC
 
     ${ANDROID_NDK}/sources/android/native_app_glue/android_native_app_glue.c
 
@@ -26,18 +28,10 @@ add_library(
     #../../../abacus/CVector2D.cpp
 )
 
-find_library(
-    log-lib
-    log
-)
-
-find_library(
-    android-lib
-    android
-)
-
-target_link_libraries(
+set(distribution_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../dist)
+set_target_properties(
     citadel
-    ${android-lib}
-    ${log-lib}
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY
+    "${distribution_DIR}/citadel/lib/android/${ANDROID_ABI}"
 )

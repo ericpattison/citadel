@@ -11,7 +11,7 @@
 
 class Game {
 public:
-	//static UPtr<Game> Create();
+	static UPtr<Game> Create();
 
 	Game();
 
@@ -25,6 +25,14 @@ private:
 	std::shared_ptr<Impl> impl;
 };
 
-extern "C" __attribute__ ((visibility ("default"))) void RegisterGame();
+extern "C" void RegisterGame();
+
+typedef UPtr<Game> (*Creator)();
+extern "C" {
+    struct GameRegistrar {
+        GameRegistrar(Creator func);
+        static Creator& GetCreator();
+    };
+}
 
 #endif
