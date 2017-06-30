@@ -11,7 +11,7 @@
 
 class Game {
 public:
-	static UPtr<Game> Create();
+	static UPtr<Game> Create(SPtr<Device> device);
 
 	Game();
 
@@ -25,7 +25,7 @@ private:
 	std::shared_ptr<Impl> impl;
 };
 
-typedef UPtr<Game> (*Creator)();
+typedef UPtr<Game> (*Creator)(SPtr<Device>);
 extern "C" {
     struct GameRegistrar {
         GameRegistrar(Creator func);

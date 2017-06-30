@@ -37,13 +37,6 @@ using UPtr = std::unique_ptr<T>;
 template<class T>
 using SPtr = std::shared_ptr<T>;
 
-#ifdef ANDROID
-
-#define MakeUPtr std::make_unique
-#define MakeSPtr std::make_shared
-
-#else
-
 template<class T, typename ...Args>
 UPtr<T> MakeUPtr(Args&& ...args) {
 	return std::make_unique<T>(std::forward<Args>(args)...);
@@ -54,6 +47,10 @@ SPtr<T> MakeSPtr(Args&& ...args) {
 	return std::make_shared<T>(std::forward<Args>(args)...);
 }
 
-#endif
+struct WindowInfo {
+	String title;
+	u32 width;
+	u32 height;
+};
 
 #endif

@@ -26,6 +26,12 @@ add_library(
     # Abacus
     #../../../abacus/CQuaternion.cpp
     #../../../abacus/CVector2D.cpp
+
+    # Watchtower
+    ../../../watchtower/device/Device.h
+    ../../../watchtower/device/OpenGL/OpenGLDevice.h
+    ../../../watchtower/device/OpenGL/OpenGLDevice.android.cpp
+    ../../../watchtower/Color.h
 )
 
 set(distribution_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../dist)
@@ -33,5 +39,5 @@ set_target_properties(
     citadel
     PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY
-    "${distribution_DIR}/citadel/lib/android/${ANDROID_ABI}"
+    "${distribution_DIR}/lib/android/${ANDROID_ABI}"
 )

@@ -25,6 +25,12 @@
     <Filter Include="keep\utils">
       <UniqueIdentifier>{a8417f20-e097-4d40-bac2-731ad8c9a274}</UniqueIdentifier>
     </Filter>
+    <Filter Include="watchtower\device\OpenGL">
+      <UniqueIdentifier>{d8e155ef-91c7-4689-9082-cacceabf24a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="keep\containers">
+      <UniqueIdentifier>{5c603d56-2e2b-449d-9a23-3942d327b417}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\castle\app\Activity.android.cpp">
@@ -32,9 +38,6 @@
     </ClCompile>
     <ClCompile Include="..\..\..\castle\game\Game.cpp">
       <Filter>castle\game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\watchtower\device\Device.vulkan.cpp">
-      <Filter>watchtower\device</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\keep\window\Window.win32.cpp">
       <Filter>keep\window</Filter>
@@ -57,6 +60,12 @@
     <ClCompile Include="..\..\..\keep\utils\win32.cpp">
       <Filter>keep\utils</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\watchtower\device\OpenGL\OpenGLDevice.android.cpp">
+      <Filter>watchtower\device\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\watchtower\device\OpenGL\OpenGLDevice.win32.cpp">
+      <Filter>watchtower\device\OpenGL</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\castle\game\Game.h">
@@ -69,9 +78,6 @@
       <Filter>keep</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\watchtower\device\Device.h">
-      <Filter>watchtower\device</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\watchtower\device\Device.vulkan.h">
       <Filter>watchtower\device</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\keep\constants.h">
@@ -88,6 +94,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\keep\utils\win32.h">
       <Filter>keep\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\watchtower\device\OpenGL\OpenGLDevice.h">
+      <Filter>watchtower\device\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\watchtower\Color.h">
+      <Filter>watchtower</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\containers\Vector.h">
+      <Filter>keep\containers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

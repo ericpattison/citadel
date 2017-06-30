@@ -3,6 +3,9 @@
 
 #include "SystemWindow.h"
 #include "../types.h"
+#include "../constants.h"
+#include "../../watchtower/device/Device.h"
+
 class OpenGLWindow : public SystemWindow {
 public:
 	OpenGLWindow(WindowInfo& info);
@@ -12,6 +15,8 @@ public:
 	virtual void Title(String title);
 	virtual WindowStatus ProcessMessages();
 	virtual void Exit(int errorCode);
+
+	virtual SPtr<Device> AcquireDevice();
 
 private:
 	class Impl;

@@ -27,9 +27,9 @@ private:
 };
 
 UPtr<Game>
-Game::Create() {
+Game::Create(SPtr<Device> device) {
     Creator Create = GameRegistrar::GetCreator();
-    return (*Create)();
+    return (*Create)(device);
 }
 
 Game::Game() {

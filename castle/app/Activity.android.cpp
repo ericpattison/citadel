@@ -11,9 +11,20 @@ void android_main(struct android_app* state) {
 	windowInfo.appState = state;
 
 	OpenGLWindow window(windowInfo);
-    UPtr<Game> game = Game::Create();
+    SPtr<Device> device = nullptr;
+    UPtr<Game> game = nullptr;
+    while(game == nullptr) {
+        window.ProcessMessages();
+        if(state->window != nullptr) {
+            device = window.AcquireDevice();
+            game = Game::Create(device);
+        }
+    }
 
-	while(window.ProcessMessages() != WindowStatus::Quit) { }
+	while(window.ProcessMessages() != WindowStatus::Quit) {
+        device->Clear();
+        device->Present();
+    }
 
 	window.Exit(result);
 }

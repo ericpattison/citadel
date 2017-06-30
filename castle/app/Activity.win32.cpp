@@ -15,10 +15,12 @@ int main(int argc, char const* argv[]) {
 	windowInfo.title = L"Citadel";
 
 	OpenGLWindow window(windowInfo);
-	std::unique_ptr<Game> game = Game::Create();
+	SPtr<Device> device = window.AcquireDevice();
+	std::unique_ptr<Game> game = Game::Create(device);
 
 	while (window.ProcessMessages() != WindowStatus::Quit) {
-
+		device->Clear();
+		device->Present();
 	}
 
 	window.Exit(result);

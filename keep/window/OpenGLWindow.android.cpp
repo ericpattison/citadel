@@ -2,6 +2,8 @@
 #include "keep/types.h"
 #include "../../keep/constants.h"
 #include "../../keep/utils/android.h"
+#include "../../watchtower/device/OpenGL/OpenGLDevice.h"
+
 #include <android/log.h>
 
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "threaded_app", __VA_ARGS__))
@@ -11,7 +13,9 @@
 class OpenGLWindow::Impl {
 public:
 	Impl(WindowInfo& info) {
-		appState = ((AndroidWindowInfo&)info).appState;
+        windowInfo = (AndroidWindowInfo&)info;
+        appState = windowInfo.appState;
+
 	}
 
 	WindowStatus ProcessMessages() {
@@ -29,12 +33,15 @@ public:
 		return WindowStatus::GameUpdate;
 	}
 
+    AndroidWindowInfo& getWindowInfo() { return windowInfo; }
+
 private:
 	android_app* appState;
+    AndroidWindowInfo windowInfo;
 };
 
 OpenGLWindow::OpenGLWindow(WindowInfo& info) : SystemWindow(info) {
-	impl = MakeUPtr<OpenGLWindow::Impl>(info);
+    impl = MakeUPtr<OpenGLWindow::Impl>(info);
 }
 
 OpenGLWindow::~OpenGLWindow() { }
@@ -46,8 +53,11 @@ void OpenGLWindow::Title(String title) {
 }
 
 WindowStatus OpenGLWindow::ProcessMessages() {
-	LOGI("Processing System Messages!");
 	return impl->ProcessMessages();
 }
 
 void OpenGLWindow::Exit(int errorCode) { }
+
+SPtr<Device> OpenGLWindow::AcquireDevice() {
+	return MakeSPtr<OpenGLDevice>(impl->getWindowInfo());
+}

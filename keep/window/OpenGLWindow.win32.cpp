@@ -1,9 +1,15 @@
 #include "OpenGLWindow.h"
 #include "../utils/win32.h"
 
+#include "../../watchtower/device/OpenGL/OpenGLDevice.h"
+
+#include "../../keep/utils/win32.h"
+
 class OpenGLWindow::Impl {
 public:
 	Impl(WindowInfo& info) {
+		windowInfo = (Win32WindowInfo&)info;
+
 		WNDCLASSEX wcex = { 0 };
 		wcex.cbSize = sizeof(WNDCLASSEX);
 		wcex.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
@@ -16,12 +22,12 @@ public:
 			throw std::runtime_error("Failed to register Window class");
 		}
 
-		RECT rect = { 0, 0, (s32)info.width, (s32)info.height };
+		RECT rect = { 0, 0, (s32)windowInfo.width, (s32)windowInfo.height };
 		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, FALSE);
 		const int windowWidth = (rect.right - rect.left);
 		const int windowHeight = (rect.bottom - rect.top);
 
-		HWND hwnd = CreateWindowEx(0, wcex.lpszClassName, (LPCWSTR)info.title.c_str(),
+		HWND hwnd = CreateWindowEx(0, wcex.lpszClassName, (LPCWSTR)windowInfo.title.c_str(),
 			WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, 0, windowWidth, windowHeight,
 			nullptr, nullptr, nullptr, nullptr);
 
@@ -33,6 +39,7 @@ public:
 		UpdateWindow(hwnd);
 
 		windowHandle = hwnd;
+		windowInfo.hwnd = hwnd;
 	}
 
 	void SetWindowSize(u32 width, u32 height) {
@@ -68,7 +75,15 @@ public:
 		return WindowStatus::SystemUpdate;
 	}
 
+	Win32WindowInfo& getWindowInfo() { return windowInfo; }
+
+	void Invalidate() {
+		RECT r{ 0,0,1280,720 };
+		InvalidateRect(windowHandle, &r, true);
+	}
+
 private:
+	Win32WindowInfo windowInfo;
 	HWND windowHandle;
 };
 
@@ -93,3 +108,9 @@ WindowStatus OpenGLWindow::ProcessMessages() {
 }
 
 void OpenGLWindow::Exit(int errorCode) {}
+
+SPtr<Device> OpenGLWindow::AcquireDevice() {
+	auto device = MakeSPtr<OpenGLDevice>(impl->getWindowInfo());
+	impl->Invalidate();
+	return device;
+}

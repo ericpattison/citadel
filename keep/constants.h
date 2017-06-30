@@ -12,11 +12,17 @@
 
 #define ENGINE_VERSION TOSTRING(ENGINE_VERSION_MAJOR) "." TOSTRING(ENGINE_VERSION_MINOR) "." TOSTRING(ENGINE_VERSION_PATCH) ENGINE_VERSION_TAG
 
-
 #ifdef ANDROID
 #define EXPORT __attribute__((visibility("default")))
 #else
 #define EXPORT
 #endif
+
+enum WindowStatus {
+	SystemUpdate,
+	GameUpdate,
+	Quit
+};
+
 
 #endif

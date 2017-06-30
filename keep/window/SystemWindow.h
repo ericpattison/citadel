@@ -3,18 +3,7 @@
 
 #include "../types.h"
 #include "../constants.h"
-
-struct WindowInfo {
-	String title;
-	u32 width;
-	u32 height;
-};
-
-enum WindowStatus {
-	SystemUpdate,
-	GameUpdate,
-	Quit
-};
+#include "../../watchtower/device/Device.h"
 
 class SystemWindow {
 public:
@@ -25,6 +14,7 @@ public:
 	virtual void Title(String title) = 0;
 	virtual WindowStatus ProcessMessages() = 0;
 	virtual void Exit(int errorCode) = 0;
+	virtual SPtr<Device> AcquireDevice() = 0;
 };
 
 #endif
