@@ -2,9 +2,12 @@
 #include "../../keep/constants.h"
 #include "../../keep/window/OpenGLWindow.h"
 
+#include "../../keep/utils/linux.h"
+
 #include "../game/Game.h"
 
 #include <iostream>
+#include <stdio.h>
 
 int main(int argc, char const* argv[]) {
 	int result = 0;
@@ -15,10 +18,13 @@ int main(int argc, char const* argv[]) {
 	windowInfo.title = L"Citadel";
 
 	OpenGLWindow window(windowInfo);
-	std::unique_ptr<Game> game = Game::Create();
+	SPtr<Device> device = window.AcquireDevice();
+	UPtr<Game> game = Game::Create(device);
 
 	while (window.ProcessMessages() != WindowStatus::Quit) {
-
+		printf("Frame\n"); 
+		device->Clear();
+		device->Present();
 	}
 
 	window.Exit(result);

@@ -24,6 +24,8 @@ add_library(
 	../../castle/game/Game.cpp
 
 	../../keep/window/OpenGLWindow.linux.cpp
+	
+	../../watchtower/device/OpenGL/OpenGLDevice.linux.cpp
 )
 
 find_library( X11 x11 )
