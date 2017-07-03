@@ -7,87 +7,204 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F1EC2371EF58F4C00C21CCC /* Activity.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F1EC2361EF58F4C00C21CCC /* Activity.ios.cpp */; };
+		5F6D57B81F0ADAD2003CBF47 /* Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57B71F0ADAD2003CBF47 /* Color.h */; };
+		5F6D57BC1F0ADAF5003CBF47 /* Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57BB1F0ADAF5003CBF47 /* Device.h */; };
+		5F6D57BE1F0ADB03003CBF47 /* OpenGLDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57BD1F0ADB03003CBF47 /* OpenGLDevice.h */; };
+		5F6D57C41F0ADBDD003CBF47 /* constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57C01F0ADBDD003CBF47 /* constants.h */; };
+		5F6D57C71F0ADBDD003CBF47 /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57C31F0ADBDD003CBF47 /* types.h */; };
+		5F6D57CB1F0ADC3B003CBF47 /* SystemWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57CA1F0ADC3B003CBF47 /* SystemWindow.h */; };
+		5F6D57CD1F0ADC49003CBF47 /* OpenGLWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57CC1F0ADC49003CBF47 /* OpenGLWindow.h */; };
+		5F6D57D41F0ADC98003CBF47 /* Activity.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D57D31F0ADC98003CBF47 /* Activity.ios.cpp */; };
+		5F6D57D71F0ADCAB003CBF47 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D57D51F0ADCAB003CBF47 /* Game.cpp */; };
+		5F6D57D81F0ADCAB003CBF47 /* Game.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57D61F0ADCAB003CBF47 /* Game.h */; };
+		5F6D57DA1F0ADCF1003CBF47 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F6D57D91F0ADCF1003CBF47 /* Info.plist */; };
+		5F6D57DC1F0ADEA5003CBF47 /* OpenGLDevice.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D57DB1F0ADEA5003CBF47 /* OpenGLDevice.ios.cpp */; };
+		5F6D57E11F0AE496003CBF47 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6D57E01F0AE496003CBF47 /* SpriteKit.framework */; };
+		5F6D57E31F0AE4B1003CBF47 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6D57E21F0AE4B1003CBF47 /* GLKit.framework */; };
+		5F6D57E41F0AE4C3003CBF47 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6D57DE1F0AE47D003CBF47 /* OpenGLES.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		5FD9BA4B1EF589E7008D39FD /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		5F1EC2361EF58F4C00C21CCC /* Activity.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Activity.ios.cpp; path = ../../castle/app/Activity.ios.cpp; sourceTree = "<group>"; };
-		5FD9BA4D1EF589E7008D39FD /* libcitadel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcitadel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6D57B71F0ADAD2003CBF47 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Color.h; path = ../../watchtower/Color.h; sourceTree = "<group>"; };
+		5F6D57BB1F0ADAF5003CBF47 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Device.h; path = ../../watchtower/device/Device.h; sourceTree = "<group>"; };
+		5F6D57BD1F0ADB03003CBF47 /* OpenGLDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLDevice.h; path = ../../watchtower/device/OpenGL/OpenGLDevice.h; sourceTree = "<group>"; };
+		5F6D57C01F0ADBDD003CBF47 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = constants.h; path = ../../keep/constants.h; sourceTree = "<group>"; };
+		5F6D57C31F0ADBDD003CBF47 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = ../../keep/types.h; sourceTree = "<group>"; };
+		5F6D57CA1F0ADC3B003CBF47 /* SystemWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemWindow.h; path = ../../keep/window/SystemWindow.h; sourceTree = "<group>"; };
+		5F6D57CC1F0ADC49003CBF47 /* OpenGLWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLWindow.h; path = ../../keep/window/OpenGLWindow.h; sourceTree = "<group>"; };
+		5F6D57D31F0ADC98003CBF47 /* Activity.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Activity.ios.cpp; path = ../../castle/app/Activity.ios.cpp; sourceTree = "<group>"; };
+		5F6D57D51F0ADCAB003CBF47 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../../castle/game/Game.cpp; sourceTree = "<group>"; };
+		5F6D57D61F0ADCAB003CBF47 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../../castle/game/Game.h; sourceTree = "<group>"; };
+		5F6D57D91F0ADCF1003CBF47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		5F6D57DB1F0ADEA5003CBF47 /* OpenGLDevice.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLDevice.ios.cpp; path = ../../watchtower/device/OpenGL/OpenGLDevice.ios.cpp; sourceTree = "<group>"; };
+		5F6D57DE1F0AE47D003CBF47 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		5F6D57E01F0AE496003CBF47 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		5F6D57E21F0AE4B1003CBF47 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		5FE7D2A31F03F6E700FB8291 /* citadel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = citadel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5FD9BA4A1EF589E7008D39FD /* Frameworks */ = {
+		5FE7D29F1F03F6E700FB8291 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F6D57E41F0AE4C3003CBF47 /* OpenGLES.framework in Frameworks */,
+				5F6D57E31F0AE4B1003CBF47 /* GLKit.framework in Frameworks */,
+				5F6D57E11F0AE496003CBF47 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5F1EC2301EF58E5900C21CCC /* citadel */ = {
+		5F6D57B41F0ADAAD003CBF47 /* watchtower */ = {
 			isa = PBXGroup;
 			children = (
-				5F1EC2341EF58F0F00C21CCC /* castle */,
+				5F6D57B71F0ADAD2003CBF47 /* Color.h */,
+				5F6D57B51F0ADAB8003CBF47 /* device */,
 			);
-			name = citadel;
+			name = watchtower;
 			sourceTree = "<group>";
 		};
-		5F1EC2341EF58F0F00C21CCC /* castle */ = {
+		5F6D57B51F0ADAB8003CBF47 /* device */ = {
 			isa = PBXGroup;
 			children = (
-				5F1EC2351EF58F1600C21CCC /* app */,
+				5F6D57BB1F0ADAF5003CBF47 /* Device.h */,
+				5F6D57B61F0ADABF003CBF47 /* OpenGL */,
+			);
+			name = device;
+			sourceTree = "<group>";
+		};
+		5F6D57B61F0ADABF003CBF47 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				5F6D57BD1F0ADB03003CBF47 /* OpenGLDevice.h */,
+				5F6D57DB1F0ADEA5003CBF47 /* OpenGLDevice.ios.cpp */,
+			);
+			name = OpenGL;
+			sourceTree = "<group>";
+		};
+		5F6D57BF1F0ADB56003CBF47 /* keep */ = {
+			isa = PBXGroup;
+			children = (
+				5F6D57C91F0ADBFC003CBF47 /* window */,
+				5F6D57C81F0ADBF4003CBF47 /* utils */,
+				5F6D57C01F0ADBDD003CBF47 /* constants.h */,
+				5F6D57C31F0ADBDD003CBF47 /* types.h */,
+			);
+			name = keep;
+			sourceTree = "<group>";
+		};
+		5F6D57C81F0ADBF4003CBF47 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		5F6D57C91F0ADBFC003CBF47 /* window */ = {
+			isa = PBXGroup;
+			children = (
+				5F6D57CC1F0ADC49003CBF47 /* OpenGLWindow.h */,
+				5F6D57CA1F0ADC3B003CBF47 /* SystemWindow.h */,
+			);
+			name = window;
+			sourceTree = "<group>";
+		};
+		5F6D57CE1F0ADC52003CBF47 /* castle */ = {
+			isa = PBXGroup;
+			children = (
+				5F6D57D01F0ADC6A003CBF47 /* game */,
+				5F6D57CF1F0ADC62003CBF47 /* app */,
 			);
 			name = castle;
 			sourceTree = "<group>";
 		};
-		5F1EC2351EF58F1600C21CCC /* app */ = {
+		5F6D57CF1F0ADC62003CBF47 /* app */ = {
 			isa = PBXGroup;
 			children = (
-				5F1EC2361EF58F4C00C21CCC /* Activity.ios.cpp */,
+				5F6D57D31F0ADC98003CBF47 /* Activity.ios.cpp */,
 			);
 			name = app;
 			sourceTree = "<group>";
 		};
-		5FD9BA441EF589E7008D39FD = {
+		5F6D57D01F0ADC6A003CBF47 /* game */ = {
 			isa = PBXGroup;
 			children = (
-				5F1EC2301EF58E5900C21CCC /* citadel */,
-				5FD9BA4E1EF589E7008D39FD /* Products */,
+				5F6D57D51F0ADCAB003CBF47 /* Game.cpp */,
+				5F6D57D61F0ADCAB003CBF47 /* Game.h */,
+			);
+			name = game;
+			sourceTree = "<group>";
+		};
+		5F6D57DD1F0AE47D003CBF47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F6D57E21F0AE4B1003CBF47 /* GLKit.framework */,
+				5F6D57E01F0AE496003CBF47 /* SpriteKit.framework */,
+				5F6D57DE1F0AE47D003CBF47 /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FE7D2991F03F6E700FB8291 = {
+			isa = PBXGroup;
+			children = (
+				5F6D57CE1F0ADC52003CBF47 /* castle */,
+				5F6D57BF1F0ADB56003CBF47 /* keep */,
+				5F6D57B41F0ADAAD003CBF47 /* watchtower */,
+				5FE7D2A51F03F6E700FB8291 /* ios */,
+				5FE7D2A41F03F6E700FB8291 /* Products */,
+				5F6D57DD1F0AE47D003CBF47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		5FD9BA4E1EF589E7008D39FD /* Products */ = {
+		5FE7D2A41F03F6E700FB8291 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5FD9BA4D1EF589E7008D39FD /* libcitadel.a */,
+				5FE7D2A31F03F6E700FB8291 /* citadel.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5FE7D2A51F03F6E700FB8291 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				5F6D57D91F0ADCF1003CBF47 /* Info.plist */,
+			);
+			name = ios;
+			path = citadel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		5FE7D2A01F03F6E700FB8291 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6D57BE1F0ADB03003CBF47 /* OpenGLDevice.h in Headers */,
+				5F6D57BC1F0ADAF5003CBF47 /* Device.h in Headers */,
+				5F6D57C41F0ADBDD003CBF47 /* constants.h in Headers */,
+				5F6D57C71F0ADBDD003CBF47 /* types.h in Headers */,
+				5F6D57B81F0ADAD2003CBF47 /* Color.h in Headers */,
+				5F6D57CB1F0ADC3B003CBF47 /* SystemWindow.h in Headers */,
+				5F6D57D81F0ADCAB003CBF47 /* Game.h in Headers */,
+				5F6D57CD1F0ADC49003CBF47 /* OpenGLWindow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		5FD9BA4C1EF589E7008D39FD /* citadel */ = {
+		5FE7D2A21F03F6E700FB8291 /* citadel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5FD9BA561EF589E7008D39FD /* Build configuration list for PBXNativeTarget "citadel" */;
+			buildConfigurationList = 5FE7D2AB1F03F6E700FB8291 /* Build configuration list for PBXNativeTarget "citadel" */;
 			buildPhases = (
-				5FD9BA491EF589E7008D39FD /* Sources */,
-				5FD9BA4A1EF589E7008D39FD /* Frameworks */,
-				5FD9BA4B1EF589E7008D39FD /* CopyFiles */,
+				5FE7D29E1F03F6E700FB8291 /* Sources */,
+				5FE7D29F1F03F6E700FB8291 /* Frameworks */,
+				5FE7D2A01F03F6E700FB8291 /* Headers */,
+				5FE7D2A11F03F6E700FB8291 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -95,54 +212,68 @@
 			);
 			name = citadel;
 			productName = citadel;
-			productReference = 5FD9BA4D1EF589E7008D39FD /* libcitadel.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 5FE7D2A31F03F6E700FB8291 /* citadel.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5FD9BA451EF589E7008D39FD /* Project object */ = {
+		5FE7D29A1F03F6E700FB8291 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Eric Pattison";
 				TargetAttributes = {
-					5FD9BA4C1EF589E7008D39FD = {
+					5FE7D2A21F03F6E700FB8291 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Y9SH43R848;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 5FD9BA481EF589E7008D39FD /* Build configuration list for PBXProject "citadel" */;
+			buildConfigurationList = 5FE7D29D1F03F6E700FB8291 /* Build configuration list for PBXProject "citadel" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 5FD9BA441EF589E7008D39FD;
-			productRefGroup = 5FD9BA4E1EF589E7008D39FD /* Products */;
+			mainGroup = 5FE7D2991F03F6E700FB8291;
+			productRefGroup = 5FE7D2A41F03F6E700FB8291 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5FD9BA4C1EF589E7008D39FD /* citadel */,
+				5FE7D2A21F03F6E700FB8291 /* citadel */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		5FE7D2A11F03F6E700FB8291 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6D57DA1F0ADCF1003CBF47 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		5FD9BA491EF589E7008D39FD /* Sources */ = {
+		5FE7D29E1F03F6E700FB8291 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F1EC2371EF58F4C00C21CCC /* Activity.ios.cpp in Sources */,
+				5F6D57D41F0ADC98003CBF47 /* Activity.ios.cpp in Sources */,
+				5F6D57DC1F0ADEA5003CBF47 /* OpenGLDevice.ios.cpp in Sources */,
+				5F6D57D71F0ADCAB003CBF47 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5FD9BA541EF589E7008D39FD /* Debug */ = {
+		5FE7D2A91F03F6E700FB8291 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -166,6 +297,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -187,10 +319,13 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		5FD9BA551EF589E7008D39FD /* Release */ = {
+		5FE7D2AA1F03F6E700FB8291 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -214,6 +349,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -228,23 +364,46 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		5FD9BA571EF589E7008D39FD /* Debug */ = {
+		5FE7D2AC1F03F6E700FB8291 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y9SH43R848;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bastiongames.citadel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		5FD9BA581EF589E7008D39FD /* Release */ = {
+		5FE7D2AD1F03F6E700FB8291 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y9SH43R848;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bastiongames.citadel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -253,25 +412,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5FD9BA481EF589E7008D39FD /* Build configuration list for PBXProject "citadel" */ = {
+		5FE7D29D1F03F6E700FB8291 /* Build configuration list for PBXProject "citadel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FD9BA541EF589E7008D39FD /* Debug */,
-				5FD9BA551EF589E7008D39FD /* Release */,
+				5FE7D2A91F03F6E700FB8291 /* Debug */,
+				5FE7D2AA1F03F6E700FB8291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5FD9BA561EF589E7008D39FD /* Build configuration list for PBXNativeTarget "citadel" */ = {
+		5FE7D2AB1F03F6E700FB8291 /* Build configuration list for PBXNativeTarget "citadel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5FD9BA571EF589E7008D39FD /* Debug */,
-				5FD9BA581EF589E7008D39FD /* Release */,
+				5FE7D2AC1F03F6E700FB8291 /* Debug */,
+				5FE7D2AD1F03F6E700FB8291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5FD9BA451EF589E7008D39FD /* Project object */;
+	rootObject = 5FE7D29A1F03F6E700FB8291 /* Project object */;
 }
