@@ -6,7 +6,6 @@
 
 class Device {
 public:
-	Device(WindowInfo& info) {}
     virtual void Clear() = 0;
 	virtual void Present() = 0;
 	virtual void SetClearColor(const Color& color) = 0;

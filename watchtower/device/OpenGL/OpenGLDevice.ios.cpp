@@ -24,10 +24,6 @@ OpenGLDevice::OpenGLDevice(WindowInfo& info) {
     impl = MakeSPtr<Impl>();
 }
 
-OpenGLDevice::OpenGLDevice(OpenGLDevice&& other) {
-    this->impl = other.impl;
-}
-
 OpenGLDevice::~OpenGLDevice() {
     
 }

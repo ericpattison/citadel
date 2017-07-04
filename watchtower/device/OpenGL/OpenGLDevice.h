@@ -15,7 +15,7 @@ public:
 
 private:
 	class Impl;
-	UPtr<Impl> impl;
+	SPtr<Impl> impl;
 	WindowInfo windowInfo;
 };
 
