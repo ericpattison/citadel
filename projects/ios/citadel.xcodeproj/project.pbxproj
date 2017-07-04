@@ -50,6 +50,7 @@
 		5F6D57DE1F0AE47D003CBF47 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		5F6D57E01F0AE496003CBF47 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		5F6D57E21F0AE4B1003CBF47 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		5F74E8461F0B40C4004140DF /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = SOURCE_ROOT; };
 		5FE7D2A31F03F6E700FB8291 /* citadel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = citadel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +188,7 @@
 				5F35AB541F0B2E3B005FB0B9 /* GameViewController.h */,
 				5F35AB551F0B2EBF005FB0B9 /* GameViewController.mm */,
 				5F35AB571F0B3636005FB0B9 /* Main.storyboard */,
+				5F74E8461F0B40C4004140DF /* Config.xcconfig */,
 			);
 			name = ios;
 			path = citadel;
@@ -295,6 +297,7 @@
 /* Begin XCBuildConfiguration section */
 		5FE7D2A91F03F6E700FB8291 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F74E8461F0B40C4004140DF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -337,7 +340,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -347,6 +350,7 @@
 		};
 		5FE7D2AA1F03F6E700FB8291 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F74E8461F0B40C4004140DF /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -393,6 +397,7 @@
 		};
 		5FE7D2AC1F03F6E700FB8291 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F74E8461F0B40C4004140DF /* Config.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CODE_SIGN_IDENTITY = "";
@@ -412,6 +417,7 @@
 		};
 		5FE7D2AD1F03F6E700FB8291 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F74E8461F0B40C4004140DF /* Config.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CODE_SIGN_IDENTITY = "";
