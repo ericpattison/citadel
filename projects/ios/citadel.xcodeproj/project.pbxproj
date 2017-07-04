@@ -10,6 +10,7 @@
 		5F35AB521F0B2B89005FB0B9 /* ios.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F35AB511F0B2B89005FB0B9 /* ios.m */; };
 		5F35AB561F0B2EBF005FB0B9 /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F35AB551F0B2EBF005FB0B9 /* GameViewController.mm */; };
 		5F35AB581F0B3636005FB0B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F35AB571F0B3636005FB0B9 /* Main.storyboard */; };
+		5F35AB5A1F0B3A7C005FB0B9 /* OpenGLWindow.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F35AB591F0B3A7C005FB0B9 /* OpenGLWindow.ios.cpp */; };
 		5F6D57B81F0ADAD2003CBF47 /* Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57B71F0ADAD2003CBF47 /* Color.h */; };
 		5F6D57BC1F0ADAF5003CBF47 /* Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57BB1F0ADAF5003CBF47 /* Device.h */; };
 		5F6D57BE1F0ADB03003CBF47 /* OpenGLDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57BD1F0ADB03003CBF47 /* OpenGLDevice.h */; };
@@ -33,6 +34,7 @@
 		5F35AB541F0B2E3B005FB0B9 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = SOURCE_ROOT; };
 		5F35AB551F0B2EBF005FB0B9 /* GameViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameViewController.mm; sourceTree = SOURCE_ROOT; };
 		5F35AB571F0B3636005FB0B9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = SOURCE_ROOT; };
+		5F35AB591F0B3A7C005FB0B9 /* OpenGLWindow.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OpenGLWindow.ios.cpp; path = ../../keep/window/OpenGLWindow.ios.cpp; sourceTree = "<group>"; };
 		5F6D57B71F0ADAD2003CBF47 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Color.h; path = ../../watchtower/Color.h; sourceTree = "<group>"; };
 		5F6D57BB1F0ADAF5003CBF47 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Device.h; path = ../../watchtower/device/Device.h; sourceTree = "<group>"; };
 		5F6D57BD1F0ADB03003CBF47 /* OpenGLDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLDevice.h; path = ../../watchtower/device/OpenGL/OpenGLDevice.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				5F6D57CC1F0ADC49003CBF47 /* OpenGLWindow.h */,
 				5F6D57CA1F0ADC3B003CBF47 /* SystemWindow.h */,
+				5F35AB591F0B3A7C005FB0B9 /* OpenGLWindow.ios.cpp */,
 			);
 			name = window;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				5F6D57DC1F0ADEA5003CBF47 /* OpenGLDevice.ios.cpp in Sources */,
 				5F6D57D71F0ADCAB003CBF47 /* Game.cpp in Sources */,
 				5F35AB521F0B2B89005FB0B9 /* ios.m in Sources */,
+				5F35AB5A1F0B3A7C005FB0B9 /* OpenGLWindow.ios.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
