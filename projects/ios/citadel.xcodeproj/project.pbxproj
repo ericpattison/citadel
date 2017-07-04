@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F35AB521F0B2B89005FB0B9 /* ios.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F35AB511F0B2B89005FB0B9 /* ios.m */; };
+		5F35AB561F0B2EBF005FB0B9 /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F35AB551F0B2EBF005FB0B9 /* GameViewController.mm */; };
+		5F35AB581F0B3636005FB0B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F35AB571F0B3636005FB0B9 /* Main.storyboard */; };
 		5F6D57B81F0ADAD2003CBF47 /* Color.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57B71F0ADAD2003CBF47 /* Color.h */; };
 		5F6D57BC1F0ADAF5003CBF47 /* Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57BB1F0ADAF5003CBF47 /* Device.h */; };
 		5F6D57BE1F0ADB03003CBF47 /* OpenGLDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57BD1F0ADB03003CBF47 /* OpenGLDevice.h */; };
@@ -14,7 +17,7 @@
 		5F6D57C71F0ADBDD003CBF47 /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57C31F0ADBDD003CBF47 /* types.h */; };
 		5F6D57CB1F0ADC3B003CBF47 /* SystemWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57CA1F0ADC3B003CBF47 /* SystemWindow.h */; };
 		5F6D57CD1F0ADC49003CBF47 /* OpenGLWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57CC1F0ADC49003CBF47 /* OpenGLWindow.h */; };
-		5F6D57D41F0ADC98003CBF47 /* Activity.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D57D31F0ADC98003CBF47 /* Activity.ios.cpp */; };
+		5F6D57D41F0ADC98003CBF47 /* Activity.ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D57D31F0ADC98003CBF47 /* Activity.ios.mm */; };
 		5F6D57D71F0ADCAB003CBF47 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D57D51F0ADCAB003CBF47 /* Game.cpp */; };
 		5F6D57D81F0ADCAB003CBF47 /* Game.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6D57D61F0ADCAB003CBF47 /* Game.h */; };
 		5F6D57DA1F0ADCF1003CBF47 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F6D57D91F0ADCF1003CBF47 /* Info.plist */; };
@@ -25,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F35AB501F0B29F2005FB0B9 /* ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ios.h; path = ../../keep/utils/ios.h; sourceTree = "<group>"; };
+		5F35AB511F0B2B89005FB0B9 /* ios.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ios.m; path = ../../keep/utils/ios.m; sourceTree = "<group>"; };
+		5F35AB541F0B2E3B005FB0B9 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = SOURCE_ROOT; };
+		5F35AB551F0B2EBF005FB0B9 /* GameViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameViewController.mm; sourceTree = SOURCE_ROOT; };
+		5F35AB571F0B3636005FB0B9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = SOURCE_ROOT; };
 		5F6D57B71F0ADAD2003CBF47 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Color.h; path = ../../watchtower/Color.h; sourceTree = "<group>"; };
 		5F6D57BB1F0ADAF5003CBF47 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Device.h; path = ../../watchtower/device/Device.h; sourceTree = "<group>"; };
 		5F6D57BD1F0ADB03003CBF47 /* OpenGLDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLDevice.h; path = ../../watchtower/device/OpenGL/OpenGLDevice.h; sourceTree = "<group>"; };
@@ -32,7 +40,7 @@
 		5F6D57C31F0ADBDD003CBF47 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = ../../keep/types.h; sourceTree = "<group>"; };
 		5F6D57CA1F0ADC3B003CBF47 /* SystemWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemWindow.h; path = ../../keep/window/SystemWindow.h; sourceTree = "<group>"; };
 		5F6D57CC1F0ADC49003CBF47 /* OpenGLWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLWindow.h; path = ../../keep/window/OpenGLWindow.h; sourceTree = "<group>"; };
-		5F6D57D31F0ADC98003CBF47 /* Activity.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Activity.ios.cpp; path = ../../castle/app/Activity.ios.cpp; sourceTree = "<group>"; };
+		5F6D57D31F0ADC98003CBF47 /* Activity.ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Activity.ios.mm; path = ../../castle/app/Activity.ios.mm; sourceTree = "<group>"; };
 		5F6D57D51F0ADCAB003CBF47 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../../castle/game/Game.cpp; sourceTree = "<group>"; };
 		5F6D57D61F0ADCAB003CBF47 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../../castle/game/Game.h; sourceTree = "<group>"; };
 		5F6D57D91F0ADCF1003CBF47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -98,6 +106,8 @@
 		5F6D57C81F0ADBF4003CBF47 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				5F35AB501F0B29F2005FB0B9 /* ios.h */,
+				5F35AB511F0B2B89005FB0B9 /* ios.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -123,7 +133,7 @@
 		5F6D57CF1F0ADC62003CBF47 /* app */ = {
 			isa = PBXGroup;
 			children = (
-				5F6D57D31F0ADC98003CBF47 /* Activity.ios.cpp */,
+				5F6D57D31F0ADC98003CBF47 /* Activity.ios.mm */,
 			);
 			name = app;
 			sourceTree = "<group>";
@@ -171,6 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				5F6D57D91F0ADCF1003CBF47 /* Info.plist */,
+				5F35AB541F0B2E3B005FB0B9 /* GameViewController.h */,
+				5F35AB551F0B2EBF005FB0B9 /* GameViewController.mm */,
+				5F35AB571F0B3636005FB0B9 /* Main.storyboard */,
 			);
 			name = ios;
 			path = citadel;
@@ -254,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F6D57DA1F0ADCF1003CBF47 /* Info.plist in Resources */,
+				5F35AB581F0B3636005FB0B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,9 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F6D57D41F0ADC98003CBF47 /* Activity.ios.cpp in Sources */,
+				5F35AB561F0B2EBF005FB0B9 /* GameViewController.mm in Sources */,
+				5F6D57D41F0ADC98003CBF47 /* Activity.ios.mm in Sources */,
 				5F6D57DC1F0ADEA5003CBF47 /* OpenGLDevice.ios.cpp in Sources */,
 				5F6D57D71F0ADCAB003CBF47 /* Game.cpp in Sources */,
+				5F35AB521F0B2B89005FB0B9 /* ios.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
