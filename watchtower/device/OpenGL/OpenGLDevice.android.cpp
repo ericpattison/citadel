@@ -1,8 +1,8 @@
 #include "OpenGLDevice.h"
 
-#include <GLES/gl.h>
-#include <GLES3/gl32.h>
 #include <EGL/egl.h>
+#include <EGL/eglext.h>
+#include <GLES3/gl3.h>
 
 #include "../../../keep/utils/android.h"
 
@@ -11,7 +11,8 @@ public:
     Impl(WindowInfo& info) {
         windowInfo = (AndroidWindowInfo &) info;
         const EGLint attribs[] = {
-            EGL_SURFACE_TYPE, EGL_WINDOW_BIT,
+            //EGL_SURFACE_TYPE, EGL_WINDOW_BIT,
+            EGL_RENDERABLE_TYPE, EGL_OPENGL_ES3_BIT_KHR,
             EGL_BLUE_SIZE, 8,
             EGL_GREEN_SIZE, 8,
             EGL_RED_SIZE, 8,
@@ -20,14 +21,36 @@ public:
 
         display = eglGetDisplay(EGL_DEFAULT_DISPLAY);
         eglInitialize(display, 0, 0);
-        eglChooseConfig(display, attribs, &config, 1, &numConfigs);
+        eglChooseConfig(display, attribs, nullptr, 0, &numConfigs);
+        UPtr<EGLConfig[]> supportedConfigs(new EGLConfig[numConfigs]);
+        eglChooseConfig(display, attribs, supportedConfigs.get(), numConfigs, &numConfigs);
+        int i = 0;
+        for(; i < numConfigs; ++i) {
+            auto& cfg = supportedConfigs[i];
+            EGLint r,g,b,d;
+            if(eglGetConfigAttrib(display, cfg, EGL_RED_SIZE, &r) &&
+                eglGetConfigAttrib(display, cfg, EGL_GREEN_SIZE, &g) &&
+                eglGetConfigAttrib(display, cfg, EGL_BLUE_SIZE, &b) &&
+                eglGetConfigAttrib(display, cfg, EGL_DEPTH_SIZE, &d) &&
+                r == 8 && g == 8 && b == 8 && d == 0) {
+
+                config = supportedConfigs[i];
+                break;
+            }
+        }
+        if(i == numConfigs) {
+            config = supportedConfigs[0];
+        }
+
         eglGetConfigAttrib(display, config, EGL_NATIVE_VISUAL_ID, &format);
 
         ANativeWindow *window = windowInfo.appState->window;
         ANativeWindow_setBuffersGeometry(window, 0, 0, format);
 
         surface = eglCreateWindowSurface(display, config, window, nullptr);
-        context = eglCreateContext(display, config, nullptr, nullptr);
+
+        EGLint contextAttrs[] = { EGL_CONTEXT_CLIENT_VERSION, 3, EGL_NONE };
+        context = eglCreateContext(display, config, EGL_NO_CONTEXT, contextAttrs);
 
         EGLBoolean makeCurrent = eglMakeCurrent(display, surface, surface, context);
 
@@ -36,7 +59,8 @@ public:
         windowInfo.height = h;
         windowInfo.width = w;
 
-        glViewport(0, 0, w, h);
+        report();
+        Initialize();
     }
 
     void Clear() {
@@ -53,17 +77,21 @@ public:
 
 private:
     void Initialize() {
-        glDisable(GL_DITHER);
-        glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_FASTEST);
-        glEnable(GL_CULL_FACE);
-        glShadeModel(GL_SMOOTH);
-        glEnable(GL_DEPTH_TEST);
+        //glDisable(GL_DITHER);
+//        glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_FASTEST);
+//        glEnable(GL_CULL_FACE);
+//        glShadeModel(GL_SMOOTH);
+//        glDisable(GL_DEPTH_TEST);
 
         glViewport(0, 0, w, h);
-        GLfloat ratio = (GLfloat)w / (GLfloat)h;
-        glMatrixMode(GL_PROJECTION);
-        glLoadIdentity();
-        glFrustumf(-ratio, ratio, -1, 1, 1, 10);
+    }
+
+    void report() {
+        auto openglInfo = {GL_VENDOR, GL_RENDERER, GL_VERSION, GL_EXTENSIONS};
+        for(auto name : openglInfo) {
+            auto info = glGetString(name);
+            LOGI("OpenGL Info: %s", info);
+        }
     }
 
     EGLDisplay display;
@@ -76,7 +104,7 @@ private:
     AndroidWindowInfo windowInfo;
 };
 
-OpenGLDevice::OpenGLDevice(WindowInfo& info) : Device(info) {
+OpenGLDevice::OpenGLDevice(WindowInfo& info) {
     impl = MakeUPtr<Impl>(info);
 }
 

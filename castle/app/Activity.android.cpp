@@ -23,6 +23,7 @@ void android_main(struct android_app* state) {
 
 	while(window.ProcessMessages() != WindowStatus::Quit) {
         device->Clear();
+        game->Render();
         device->Present();
     }
 

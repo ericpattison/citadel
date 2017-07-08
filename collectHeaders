@@ -1,0 +1,1 @@
+rsync -avm --include="*.h" --exclude="dist" --exclude="projects" --include="*/" --exclude="*" ./ ./dist/

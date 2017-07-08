@@ -3,10 +3,11 @@
 #include "../../keep/window/OpenGLWindow.h"
 
 #include "../game/Game.h"
-
+#include <Windows.h>
 #include <iostream>
 
 int main(int argc, char const* argv[]) {
+	FreeConsole();
 	int result = 0;
 
 	WindowInfo windowInfo;
@@ -20,6 +21,7 @@ int main(int argc, char const* argv[]) {
 
 	while (window.ProcessMessages() != WindowStatus::Quit) {
 		device->Clear();
+		game->Render();
 		device->Present();
 	}
 

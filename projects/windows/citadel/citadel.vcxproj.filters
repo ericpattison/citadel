@@ -105,4 +105,7 @@
       <Filter>keep\containers</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\collectHeaders" />
+  </ItemGroup>
 </Project>

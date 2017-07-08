@@ -75,6 +75,9 @@
     <ClInclude Include="..\..\..\watchtower\device\Device.h" />
     <ClInclude Include="..\..\..\watchtower\device\OpenGL\OpenGLDevice.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\collectHeaders" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{92C823BE-106D-4F73-A600-D3A4B99463CE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

@@ -57,7 +57,7 @@ private:
 	HWND hwnd;
 };
 
-OpenGLDevice::OpenGLDevice(WindowInfo& info) : Device(info) {
+OpenGLDevice::OpenGLDevice(WindowInfo& info) {
 	impl = MakeUPtr<Impl>(info);
 }
 
