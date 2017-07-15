@@ -74,6 +74,7 @@
     <ClInclude Include="..\..\..\watchtower\Color.h" />
     <ClInclude Include="..\..\..\watchtower\device\Device.h" />
     <ClInclude Include="..\..\..\watchtower\device\OpenGL\OpenGLDevice.h" />
+    <ClInclude Include="..\..\..\watchtower\Renderable.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\collectHeaders" />

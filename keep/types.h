@@ -18,8 +18,6 @@ typedef	float		real;
 typedef	float		real32;
 typedef	double		real64;
 
-typedef	void *		handle;
-
 #include <string>
 typedef std::wstring String;
 
@@ -46,6 +44,8 @@ template<class T, typename ...Args>
 SPtr<T> MakeSPtr(Args&& ...args) {
 	return std::make_shared<T>(std::forward<Args>(args)...);
 }
+
+typedef SPtr<void*> handle;
 
 struct WindowInfo {
 	String title;
