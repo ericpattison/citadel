@@ -31,6 +31,12 @@
     <Filter Include="keep\containers">
       <UniqueIdentifier>{5c603d56-2e2b-449d-9a23-3942d327b417}</UniqueIdentifier>
     </Filter>
+    <Filter Include="keep\crypto">
+      <UniqueIdentifier>{46c8ad70-3062-4d2d-80b5-6f056a30722f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="castle\renderers">
+      <UniqueIdentifier>{988d105e-3a97-4b51-93f9-760bc7962ff2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\castle\app\Activity.android.cpp">
@@ -65,6 +71,18 @@
     </ClCompile>
     <ClCompile Include="..\..\..\watchtower\device\OpenGL\OpenGLDevice.win32.cpp">
       <Filter>watchtower\device\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\keep\containers\String.cpp">
+      <Filter>keep\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\keep\crypto\Sha1Hash.cpp">
+      <Filter>keep\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\keep\crypto\Sha1.cpp">
+      <Filter>keep\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\keep\crypto\UUID.cpp">
+      <Filter>keep\crypto</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +124,27 @@
     </ClInclude>
     <ClInclude Include="..\..\..\watchtower\Renderable.h">
       <Filter>watchtower</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\crypto\Hash.h">
+      <Filter>keep\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\containers\String.h">
+      <Filter>keep\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\crypto\Sha1Hash.h">
+      <Filter>keep\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\crypto\Sha1.h">
+      <Filter>keep\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\keep\crypto\UUID.h">
+      <Filter>keep\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\castle\renderers\Renderer.h">
+      <Filter>castle\renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\castle\renderers\StereoscopicRenderer.h">
+      <Filter>castle\renderers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

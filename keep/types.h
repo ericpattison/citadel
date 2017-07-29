@@ -18,8 +18,11 @@ typedef	float		real;
 typedef	float		real32;
 typedef	double		real64;
 
-#include <string>
-typedef std::wstring String;
+/*#include <string>
+typedef std::wstring String;*/
+#include "containers/String.h"
+
+#include "crypto/sha1.h"
 
 #include <functional>
 template<class func>
@@ -29,6 +32,13 @@ using Delegate = std::function<func>;
 using next_t = Delegate<void()>;
 using Next = std::shared_ptr<next_t>;
 using Callback = Delegate<void(Next)>;
+template<class F, class I>
+Callback BindCallback(F func, I inst) {
+	return std::bind(func, inst, std::placeholders::_1);
+}
+
+using UpdateMethod = Delegate<void()>;
+using RenderMethod = Delegate<void()>;
 
 template<class T>
 using UPtr = std::unique_ptr<T>;

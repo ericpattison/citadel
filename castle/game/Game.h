@@ -4,6 +4,7 @@
 #include "../../keep/types.h"
 #include "../../keep/constants.h"
 #include "Updater.h"
+#include "../renderers/Renderer.h"
 #include "../../keep/window/SystemWindow.h"
 
 #include <memory>
@@ -18,7 +19,11 @@ public:
 	virtual void Update() = 0;
 	virtual void Render() = 0;
 
+	void DoUpdate();
+	void DoRender();
+
 	void OnUpdate(std::shared_ptr<Updater> updater);
+	void OnRender(SPtr<Renderer> renderer);
 
 private:
 	class Impl;

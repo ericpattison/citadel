@@ -27,7 +27,7 @@ public:
 		const int windowWidth = (rect.right - rect.left);
 		const int windowHeight = (rect.bottom - rect.top);
 
-		HWND hwnd = CreateWindowEx(0, wcex.lpszClassName, (LPCWSTR)windowInfo.title.c_str(),
+		HWND hwnd = CreateWindowEx(0, wcex.lpszClassName, windowInfo.title.ToRawWString(),
 			WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, 0, windowWidth, windowHeight,
 			nullptr, nullptr, nullptr, nullptr);
 
@@ -60,7 +60,7 @@ public:
 	}
 
 	void SetWindowTitle(String title) {
-		SetWindowText(windowHandle, title.c_str());
+		SetWindowText(windowHandle, title.ToRawWString());
 	}
 
 	WindowStatus ProcessMessages() {

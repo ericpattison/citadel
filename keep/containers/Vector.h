@@ -9,9 +9,7 @@ class Vector {
 public:
 	Vector() = default;
 	Vector(const Vector&) = default;
-	Vector(std::initializer_list<T> il) : data(il) {
-
-	}
+	Vector(std::initializer_list<T> il) : data(il) { }
 
 	u32 size() { return data.size() * sizeof(T); }
 	u32 count() { return data.size(); }
@@ -24,6 +22,10 @@ public:
 	T pop() { return data.pop_back(); }
 
 	T at(u32 index) { return data[index]; }
+
+	using Iterator = typename std::vector<T>::iterator;
+	Iterator begin() { return data.begin(); }
+	Iterator end() { return data.end(); }
 private:
 	std::vector<T> data;
 };

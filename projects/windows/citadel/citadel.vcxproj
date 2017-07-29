@@ -33,6 +33,10 @@
     </ClCompile>
     <ClCompile Include="..\..\..\castle\app\Activity.win32.cpp" />
     <ClCompile Include="..\..\..\castle\game\Game.cpp" />
+    <ClCompile Include="..\..\..\keep\containers\String.cpp" />
+    <ClCompile Include="..\..\..\keep\crypto\Sha1.cpp" />
+    <ClCompile Include="..\..\..\keep\crypto\Sha1Hash.cpp" />
+    <ClCompile Include="..\..\..\keep\crypto\UUID.cpp" />
     <ClCompile Include="..\..\..\keep\utils\win32.cpp" />
     <ClCompile Include="..\..\..\keep\window\OpenGLWindow.android.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -64,8 +68,15 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\castle\game\Game.h" />
     <ClInclude Include="..\..\..\castle\game\Updater.h" />
+    <ClInclude Include="..\..\..\castle\renderers\Renderer.h" />
+    <ClInclude Include="..\..\..\castle\renderers\StereoscopicRenderer.h" />
     <ClInclude Include="..\..\..\keep\constants.h" />
+    <ClInclude Include="..\..\..\keep\containers\String.h" />
     <ClInclude Include="..\..\..\keep\containers\Vector.h" />
+    <ClInclude Include="..\..\..\keep\crypto\Hash.h" />
+    <ClInclude Include="..\..\..\keep\crypto\Sha1.h" />
+    <ClInclude Include="..\..\..\keep\crypto\Sha1Hash.h" />
+    <ClInclude Include="..\..\..\keep\crypto\UUID.h" />
     <ClInclude Include="..\..\..\keep\types.h" />
     <ClInclude Include="..\..\..\keep\utils\android.h" />
     <ClInclude Include="..\..\..\keep\utils\win32.h" />
